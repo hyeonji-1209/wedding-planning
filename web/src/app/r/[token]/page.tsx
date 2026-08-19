@@ -194,7 +194,9 @@ export default async function ResultPage({ params }: Props) {
                       </span>
                     </div>
                     <figcaption className="pt-1 text-[9px] font-light text-muted-foreground">
-                      {image.sourceLabel}
+                      <a href={image.sourceUrl} target="_blank" rel="noreferrer" className="hover:text-blush">
+                        {image.sourceLabel} · {image.credit}
+                      </a>
                     </figcaption>
                   </figure>
                 ))}

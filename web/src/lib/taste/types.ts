@@ -31,12 +31,17 @@ export type DressAttributes = {
 };
 
 // dress_images 행에 대응 (docs/architecture.md). Supabase 연결 전까지는 시드 파일이 대신한다.
+// 이미지 바이너리는 레포에 없다 — 원격 URL만 (.claude/rules/data.md).
 export type DressImage = {
   id: string;
   shopId: string;
-  /** 로컬 시드는 /dresses/*.jpg. 실데이터는 공식 출처 URL (원본 재호스팅 금지). */
+  /** 원격 이미지 URL. next/image remotePatterns에 호스트가 등록돼 있어야 한다. */
   src: string;
-  sourceLabel: string; // 출처 표기
+  sourceLabel: string; // 출처 표기 (화면 노출)
+  /** 출처 페이지 URL — 없는 행은 불량 데이터다 (.claude/rules/data.md) */
+  sourceUrl: string;
+  /** 출처 계정(작가/샵 핸들) */
+  credit: string;
   attrs: DressAttributes;
   taggedBy: string;
 };

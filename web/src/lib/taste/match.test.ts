@@ -7,8 +7,10 @@ function img(id: string, shopId: string, over: Partial<DressAttributes>): DressI
   return {
     id,
     shopId,
-    src: `/x/${id}.jpg`,
+    src: `https://example.com/${id}.jpg`,
     sourceLabel: "test",
+    sourceUrl: `https://example.com/${id}`,
+    credit: "tester",
     taggedBy: "human",
     attrs: {
       silhouette: "a-line",
