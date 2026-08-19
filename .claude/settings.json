@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(pnpm check)",
+      "Bash(pnpm test:*)",
+      "Bash(pnpm dev)",
+      "Bash(pnpm ingest:*)",
+      "Bash(pnpm eval:taste)",
+      "Bash(pnpm install)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr diff:*)",
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push:* +*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "case \"$(jq -r '.tool_input.file_path')\" in *lib/taste/prompt.ts|*lib/taste/vector.ts) echo '{\"systemMessage\":\"취향 파이프라인 변경 — merge 전에 pnpm eval:taste 통과 필요\"}' ;; *supabase/migrations/*) echo '{\"systemMessage\":\"마이그레이션 추가 — 슬랙에 스키마 변경 공유할 것\"}' ;; esac",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
