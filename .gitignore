@@ -6,3 +6,6 @@ node_modules/
 # Claude Code — 개인 설정 (공유 금지)
 .claude/settings.local.json
 CLAUDE.local.md
+
+# 수집 이미지 — 레포에 넣지 않는다 (docs/architecture.md 이미지 소싱)
+data/seed-images/
