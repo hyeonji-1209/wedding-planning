@@ -1,0 +1,33 @@
+{
+  "_comment": "Cut 1 시드. 이미지 파일은 여기 없다 — 출처만 기록한다. docs/architecture.md '이미지 소싱' 참고.",
+  "shops": [
+    {
+      "name": "헤스티아",
+      "handle": "hestia_bride",
+      "official_url": "http://w-hestia.com/",
+      "instagram": "https://www.instagram.com/hestia_bride/",
+      "source": "official_site"
+    },
+    {
+      "name": "르네아뜰리에",
+      "handle": "rene_atelier_official",
+      "official_url": null,
+      "instagram": "https://www.instagram.com/rene_atelier_official/",
+      "source": "instagram"
+    },
+    {
+      "name": "이브스더데이",
+      "handle": "eves.theday",
+      "official_url": null,
+      "instagram": "https://www.instagram.com/eves.theday/",
+      "source": "instagram"
+    },
+    {
+      "name": "셀린아뜰리에",
+      "handle": "celineatelier_wedding",
+      "official_url": null,
+      "instagram": "https://www.instagram.com/celineatelier_wedding/",
+      "source": "instagram"
+    }
+  ]
+}
