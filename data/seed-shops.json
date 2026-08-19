@@ -6,28 +6,32 @@
       "handle": "hestia_bride",
       "official_url": "http://w-hestia.com/",
       "instagram": "https://www.instagram.com/hestia_bride/",
-      "source": "official_site"
+      "source": "instagram",
+      "images_dir": "data/seed-images/hestia_bride"
     },
     {
       "name": "르네아뜰리에",
       "handle": "rene_atelier_official",
       "official_url": null,
       "instagram": "https://www.instagram.com/rene_atelier_official/",
-      "source": "instagram"
+      "source": "instagram",
+      "images_dir": "data/seed-images/rene_atelier_official"
     },
     {
       "name": "이브스더데이",
       "handle": "eves.theday",
       "official_url": null,
       "instagram": "https://www.instagram.com/eves.theday/",
-      "source": "instagram"
+      "source": "instagram",
+      "images_dir": "data/seed-images/eves.theday"
     },
     {
       "name": "셀린아뜰리에",
       "handle": "celineatelier_wedding",
       "official_url": null,
       "instagram": "https://www.instagram.com/celineatelier_wedding/",
-      "source": "instagram"
+      "source": "instagram",
+      "images_dir": "data/seed-images/celineatelier_wedding"
     }
   ]
 }
