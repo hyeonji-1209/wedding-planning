@@ -77,5 +77,405 @@
       "price_note": "대여가 95만원",
       "source_url": "https://fleuve-atelier.com/98/?idx=199"
     }
+  },
+  "florence": {
+    "MODERNPURITY-01.jpg": {
+      "name": "MODERNPURITY",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/MODERNPURITY"
+    },
+    "MODERNPURITY-02.jpg": {
+      "name": "MODERNPURITY",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/MODERNPURITY"
+    },
+    "MODERNPURITY-03.jpg": {
+      "name": "MODERNPURITY",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/MODERNPURITY"
+    },
+    "CLASSICTAPESTRY-01.jpg": {
+      "name": "CLASSICTAPESTRY",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/CLASSICTAPESTRY"
+    },
+    "CLASSICTAPESTRY-02.jpg": {
+      "name": "CLASSICTAPESTRY",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/CLASSICTAPESTRY"
+    },
+    "CLASSICTAPESTRY-03.jpg": {
+      "name": "CLASSICTAPESTRY",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/CLASSICTAPESTRY"
+    },
+    "ETHEREALBLOOM-01.jpg": {
+      "name": "ETHEREALBLOOM",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/ETHEREALBLOOM"
+    },
+    "ETHEREALBLOOM-02.jpg": {
+      "name": "ETHEREALBLOOM",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/ETHEREALBLOOM"
+    },
+    "ETHEREALBLOOM-03.jpg": {
+      "name": "ETHEREALBLOOM",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/ETHEREALBLOOM"
+    },
+    "GARDENELEGANCE-01.jpg": {
+      "name": "GARDENELEGANCE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GARDENELEGANCE"
+    },
+    "GARDENELEGANCE-02.jpg": {
+      "name": "GARDENELEGANCE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GARDENELEGANCE"
+    },
+    "GARDENELEGANCE-03.jpg": {
+      "name": "GARDENELEGANCE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GARDENELEGANCE"
+    },
+    "GENTLEBLOOM-01.jpg": {
+      "name": "GENTLEBLOOM",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GENTLEBLOOM"
+    },
+    "GENTLEBLOOM-02.jpg": {
+      "name": "GENTLEBLOOM",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GENTLEBLOOM"
+    },
+    "GENTLEBLOOM-03.jpg": {
+      "name": "GENTLEBLOOM",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GENTLEBLOOM"
+    },
+    "GoldenPoise-01.jpg": {
+      "name": "GoldenPoise",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GoldenPoise"
+    },
+    "GoldenPoise-02.jpg": {
+      "name": "GoldenPoise",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GoldenPoise"
+    },
+    "GoldenPoise-03.jpg": {
+      "name": "GoldenPoise",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/GoldenPoise"
+    },
+    "LAVENDERVEIL-01.jpg": {
+      "name": "LAVENDERVEIL",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/LAVENDERVEIL"
+    },
+    "LAVENDERVEIL-02.jpg": {
+      "name": "LAVENDERVEIL",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/LAVENDERVEIL"
+    },
+    "LAVENDERVEIL-03.jpg": {
+      "name": "LAVENDERVEIL",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/LAVENDERVEIL"
+    },
+    "modernmuse-01.jpg": {
+      "name": "modernmuse",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/modernmuse"
+    },
+    "modernmuse-02.jpg": {
+      "name": "modernmuse",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/modernmuse"
+    },
+    "modernmuse-03.jpg": {
+      "name": "modernmuse",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/modernmuse"
+    },
+    "Puregrace-01.jpg": {
+      "name": "Puregrace",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/Puregrace"
+    },
+    "Puregrace-02.jpg": {
+      "name": "Puregrace",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/Puregrace"
+    },
+    "Puregrace-03.jpg": {
+      "name": "Puregrace",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/Puregrace"
+    },
+    "ROYALHERITAGE-01.jpg": {
+      "name": "ROYALHERITAGE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/ROYALHERITAGE"
+    },
+    "ROYALHERITAGE-02.jpg": {
+      "name": "ROYALHERITAGE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/ROYALHERITAGE"
+    },
+    "ROYALHERITAGE-03.jpg": {
+      "name": "ROYALHERITAGE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/ROYALHERITAGE"
+    },
+    "SOFTARCHITECTURE-01.jpg": {
+      "name": "SOFTARCHITECTURE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/SOFTARCHITECTURE"
+    },
+    "SOFTARCHITECTURE-02.jpg": {
+      "name": "SOFTARCHITECTURE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/SOFTARCHITECTURE"
+    },
+    "SOFTARCHITECTURE-03.jpg": {
+      "name": "SOFTARCHITECTURE",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/SOFTARCHITECTURE"
+    },
+    "softromance-01.jpg": {
+      "name": "softromance",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/softromance"
+    },
+    "softromance-02.jpg": {
+      "name": "softromance",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/softromance"
+    },
+    "softromance-03.jpg": {
+      "name": "softromance",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/softromance"
+    },
+    "TIMLESSSILKICON-01.jpg": {
+      "name": "TIMLESSSILKICON",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/TIMLESSSILKICON"
+    },
+    "TIMLESSSILKICON-02.jpg": {
+      "name": "TIMLESSSILKICON",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/TIMLESSSILKICON"
+    },
+    "TIMLESSSILKICON-03.jpg": {
+      "name": "TIMLESSSILKICON",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/TIMLESSSILKICON"
+    },
+    "WHITEPETAL-01.jpg": {
+      "name": "WHITEPETAL",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/WHITEPETAL"
+    },
+    "WHITEPETAL-02.jpg": {
+      "name": "WHITEPETAL",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/WHITEPETAL"
+    },
+    "WHITEPETAL-03.jpg": {
+      "name": "WHITEPETAL",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://florencewedding.co.kr/WHITEPETAL"
+    }
+  },
+  "arha_bridal": {
+    "2023FW-01.jpg": {
+      "name": "2023FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2023FW"
+    },
+    "2023FW-02.jpg": {
+      "name": "2023FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2023FW"
+    },
+    "2023FW-03.jpg": {
+      "name": "2023FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2023FW"
+    },
+    "2023FW-04.jpg": {
+      "name": "2023FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2023FW"
+    },
+    "2022FW-01.jpg": {
+      "name": "2022FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2022FW"
+    },
+    "2022FW-02.jpg": {
+      "name": "2022FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2022FW"
+    },
+    "2022FW-03.jpg": {
+      "name": "2022FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2022FW"
+    },
+    "2022FW-04.jpg": {
+      "name": "2022FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2022FW"
+    },
+    "2022SS-01.jpg": {
+      "name": "2022SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2022SS"
+    },
+    "2022SS-02.jpg": {
+      "name": "2022SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2022SS"
+    },
+    "2022SS-03.jpg": {
+      "name": "2022SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2022SS"
+    },
+    "2022SS-04.jpg": {
+      "name": "2022SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2022SS"
+    },
+    "2021FW-01.jpg": {
+      "name": "2021FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2021FW"
+    },
+    "2021FW-02.jpg": {
+      "name": "2021FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2021FW"
+    },
+    "2021FW-03.jpg": {
+      "name": "2021FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2021FW"
+    },
+    "2021FW-04.jpg": {
+      "name": "2021FW",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2021FW"
+    },
+    "2021SS-01.jpg": {
+      "name": "2021SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2021SS"
+    },
+    "2021SS-02.jpg": {
+      "name": "2021SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2021SS"
+    },
+    "2021SS-03.jpg": {
+      "name": "2021SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2021SS"
+    },
+    "2021SS-04.jpg": {
+      "name": "2021SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2021SS"
+    },
+    "2020SS-01.jpg": {
+      "name": "2020SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2020SS"
+    },
+    "2020SS-02.jpg": {
+      "name": "2020SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2020SS"
+    },
+    "2020SS-03.jpg": {
+      "name": "2020SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2020SS"
+    },
+    "2020SS-04.jpg": {
+      "name": "2020SS",
+      "name_en": null,
+      "price_note": null,
+      "source_url": "https://arhabridal.com/2020SS"
+    }
   }
 }
