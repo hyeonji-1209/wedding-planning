@@ -1,5 +1,5 @@
 // 이미지 → DressAttributes 태깅 프롬프트.
-// ⚠️ 이 파일을 고치면 `pnpm eval:taste` 통과 없이 merge 금지 (.claude/rules/taste-pipeline.md).
+// ⚠️ 이 파일을 고치면 `npm run eval:taste` 통과 없이 merge 금지 (.claude/rules/taste-pipeline.md).
 // 출력 형식은 structured outputs(schema.ts)가 강제하므로 여기서는 판단 기준만 쓴다.
 
 export const TAGGING_PROMPT = `당신은 웨딩드레스 스타일 분석가다. 이 사진 속 웨딩드레스 한 벌의 속성을 채운다.
@@ -39,4 +39,5 @@ mood — 이 드레스의 분위기 분포. modern(절제·구조적·미니멀)
 
 rationale — 한국어 한 문장. 결과 화면에 사용자에게 그대로 노출된다.
 - 이 드레스의 취향 신호를 구체적 시각 근거로 요약한다. 예: "장식 없는 미카도 원단이 각 잡힌 스트레이트 네크라인으로 떨어지는 구조적인 드레스."
+- **사진에서 실제로 보이는 특징만 인용한다.** 안 보여서 추정한 축(예: 뒷모습 없는 사진의 back)은 rationale에 쓰지 않는다 — 사용자가 사진과 대조했을 때 틀린 근거 하나가 결과 전체의 신뢰를 깎는다.
 - "이 사진은", "이 이미지에는" 같은 메타 표현 금지. 드레스 자체만 말한다.`;
