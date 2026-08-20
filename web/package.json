@@ -8,10 +8,13 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "check": "tsc --noEmit && eslint src && vitest run --reporter=dot"
+    "check": "tsc --noEmit && eslint src && vitest run --reporter=dot",
+    "ingest": "node --env-file-if-exists=.env.local --import tsx scripts/ingest.ts",
+    "eval:taste": "node --import tsx scripts/eval-taste.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",
+    "@supabase/supabase-js": "^2.112.3",
     "lucide-react": "^1.32.0",
     "motion": "^13.1.0",
     "next": "16.3.1",
@@ -30,6 +33,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
     "tailwindcss": "^4",
+    "tsx": "^4.23.12",
     "typescript": "^5",
     "vitest": "^4.1.11"
   }

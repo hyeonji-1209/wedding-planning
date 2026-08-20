@@ -1,8 +1,8 @@
 ---
 paths:
-  - "lib/taste/**"
-  - "scripts/ingest*"
-  - "evals/**"
+  - "web/src/lib/taste/**"
+  - "web/scripts/**"
+  - "web/evals/**"
 ---
 
 # 취향 파이프라인 규칙

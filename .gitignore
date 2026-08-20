@@ -3,6 +3,14 @@ node_modules/
 .env*
 .next/
 
+# 시드 이미지·파이프라인 상태 — 이미지 파일은 git에 넣지 않는다 (docs/architecture.md)
+data/seed-images/
+data/.ingest-state.json
+
 # Claude Code — 개인 설정 (공유 금지)
 .claude/settings.local.json
 CLAUDE.local.md
+
+# supabase CLI 로컬 상태
+supabase/.temp/
+web/supabase/

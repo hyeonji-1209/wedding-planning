@@ -1,7 +1,7 @@
 ---
 paths:
-  - "app/**"
-  - "components/**"
+  - "web/src/app/**"
+  - "web/src/components/**"
 ---
 
 # 사용자 경험 규칙
