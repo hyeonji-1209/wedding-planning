@@ -79,8 +79,10 @@ def imweb(shop, cfg, defaults, meta):
     """imweb 사이트. ?idx= 상품 링크가 있으면 상품 카탈로그, 없으면 갤러리 페이지."""
     out_dir = IMAGES / shop["handle"]; out_dir.mkdir(parents=True, exist_ok=True)
     min_width = cfg.get("min_width", defaults["min_width"])
-    per_page = cfg.get("per_page", 3)
-    for page_url in cfg["pages"]:
+    for entry in cfg["pages"]:
+        # 문자열이면 샵 기본값, 객체면 그 페이지 전용 장수를 쓴다
+        page_url = entry if isinstance(entry, str) else entry["url"]
+        per_page = cfg.get("per_page", 3) if isinstance(entry, str) else entry.get("per_page", 3)
         page = fetch(page_url)
         if not page:
             continue

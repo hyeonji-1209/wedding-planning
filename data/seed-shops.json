@@ -115,11 +115,17 @@
       "images_dir": "data/seed-images/fleuve_atelier",
       "harvest": {
         "adapter": "imweb",
-        "per_page": 1,
         "pages": [
-          "https://fleuve-atelier.com/98"
+          {
+            "url": "https://fleuve-atelier.com/98",
+            "per_page": 1
+          },
+          {
+            "url": "https://fleuve-atelier.com/lookbook",
+            "per_page": 14
+          }
         ],
-        "note": "?idx= 상품 카탈로그. 제목에서 이름·영문명·대여가가 나온다"
+        "note": "?idx= 상품 카탈로그(제목에서 이름·영문명·대여가) + 룩북 갤러리. 카탈로그가 12벌뿐이라 룩북으로 채운다"
       }
     },
     {
@@ -188,6 +194,6 @@
   "_defaults": {
     "min_width": 1000,
     "portrait_only": true,
-    "note": "세로(h>w)이고 가로 min_width 이상만 받는다. imweb의 upload/·thumbnail/ 경로는 크기를 뜻하지 않아서 경로로 걸러선 안 된다"
+    "note": "세로(h>w)이고 가로 min_width 이상만 받는다. imweb의 upload/·thumbnail/ 경로는 크기를 뜻하지 않아서 경로로 걸러선 안 된다. pages 항목은 URL 문자열이거나 {url, per_page} 객체다 — 상품 카탈로그는 드레스당 1장, 갤러리는 여러 장이라 페이지마다 다르다"
   }
 }

@@ -1,83 +1,4 @@
 {
-  "fleuve_atelier": {
-    "187-01.jpg": {
-      "name": "루나",
-      "name_en": "Luna",
-      "price_note": "대여가 85만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=187"
-    },
-    "188-01.jpg": {
-      "name": "레이",
-      "name_en": "Rai",
-      "price_note": "대여가 80만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=188"
-    },
-    "189-01.jpg": {
-      "name": "델라",
-      "name_en": "Della",
-      "price_note": "대여가 90만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=189"
-    },
-    "190-01.jpg": {
-      "name": "에블린",
-      "name_en": "Evelyn",
-      "price_note": "대여가 95만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=190"
-    },
-    "191-01.jpg": {
-      "name": "세이지",
-      "name_en": "Sage",
-      "price_note": "대여가 95만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=191"
-    },
-    "192-01.jpg": {
-      "name": "아이린",
-      "name_en": "Irene",
-      "price_note": "대여가 90만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=192"
-    },
-    "193-01.jpg": {
-      "name": "필리스",
-      "name_en": "Phillies",
-      "price_note": "대여가 98만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=193"
-    },
-    "195-01.jpg": {
-      "name": "엘라",
-      "name_en": "Ella",
-      "price_note": "대여가 90만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=195"
-    },
-    "197-01.jpg": {
-      "name": "아인",
-      "name_en": "Ain",
-      "price_note": "대여가 85만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=197"
-    },
-    "198-01.jpg": {
-      "name": "클로이",
-      "name_en": "Chloe",
-      "price_note": "대여가 85만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=198"
-    },
-    "199-01.jpg": {
-      "name": "케인",
-      "name_en": "Kein",
-      "price_note": "대여가 95만원",
-      "collection": null,
-      "source_url": "https://fleuve-atelier.com/98/?idx=199"
-    }
-  },
   "florence": {
     "MODERNPURITY-01.jpg": {
       "name": null,
@@ -547,5 +468,182 @@
   "hestia_bride": {},
   "rene_atelier_official": {},
   "eves.theday": {},
-  "celineatelier_wedding": {}
+  "celineatelier_wedding": {},
+  "fleuve_atelier": {
+    "187-01.jpg": {
+      "name": "루나",
+      "name_en": "Luna",
+      "price_note": "대여가 85만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=187"
+    },
+    "188-01.jpg": {
+      "name": "레이",
+      "name_en": "Rai",
+      "price_note": "대여가 80만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=188"
+    },
+    "189-01.jpg": {
+      "name": "델라",
+      "name_en": "Della",
+      "price_note": "대여가 90만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=189"
+    },
+    "190-01.jpg": {
+      "name": "에블린",
+      "name_en": "Evelyn",
+      "price_note": "대여가 95만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=190"
+    },
+    "191-01.jpg": {
+      "name": "세이지",
+      "name_en": "Sage",
+      "price_note": "대여가 95만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=191"
+    },
+    "192-01.jpg": {
+      "name": "아이린",
+      "name_en": "Irene",
+      "price_note": "대여가 90만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=192"
+    },
+    "193-01.jpg": {
+      "name": "필리스",
+      "name_en": "Phillies",
+      "price_note": "대여가 98만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=193"
+    },
+    "195-01.jpg": {
+      "name": "엘라",
+      "name_en": "Ella",
+      "price_note": "대여가 90만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=195"
+    },
+    "197-01.jpg": {
+      "name": "아인",
+      "name_en": "Ain",
+      "price_note": "대여가 85만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=197"
+    },
+    "198-01.jpg": {
+      "name": "클로이",
+      "name_en": "Chloe",
+      "price_note": "대여가 85만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=198"
+    },
+    "199-01.jpg": {
+      "name": "케인",
+      "name_en": "Kein",
+      "price_note": "대여가 95만원",
+      "collection": null,
+      "source_url": "https://fleuve-atelier.com/98/?idx=199"
+    },
+    "lookbook-01.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-02.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-03.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-04.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-05.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-06.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-07.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-08.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-09.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-10.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-11.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-12.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-13.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    },
+    "lookbook-14.jpg": {
+      "name": null,
+      "name_en": null,
+      "price_note": null,
+      "collection": "lookbook",
+      "source_url": "https://fleuve-atelier.com/lookbook"
+    }
+  }
 }
