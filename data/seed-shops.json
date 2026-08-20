@@ -1,33 +1,127 @@
 {
-  "_comment": "Cut 1 시드. 이미지 파일은 여기 없다 — 출처만 기록한다. docs/architecture.md '이미지 소싱' 참고.",
+  "_comment": "샵 목록. status=collected는 이미지 수집 완료, candidate는 미확인 후보. 이미지 파일은 여기 없다 — 출처만 기록한다. docs/architecture.md '이미지 소싱' 참고.",
   "shops": [
     {
       "name": "헤스티아",
       "handle": "hestia_bride",
       "official_url": "http://w-hestia.com/",
       "instagram": "https://www.instagram.com/hestia_bride/",
-      "source": "official_site"
+      "source": "official_site",
+      "status": "collected"
     },
     {
       "name": "르네아뜰리에",
       "handle": "rene_atelier_official",
       "official_url": null,
       "instagram": "https://www.instagram.com/rene_atelier_official/",
-      "source": "instagram"
+      "source": "instagram",
+      "status": "collected"
     },
     {
       "name": "이브스더데이",
       "handle": "eves.theday",
       "official_url": null,
       "instagram": "https://www.instagram.com/eves.theday/",
-      "source": "instagram"
+      "source": "instagram",
+      "status": "collected"
     },
     {
       "name": "셀린아뜰리에",
       "handle": "celineatelier_wedding",
       "official_url": null,
       "instagram": "https://www.instagram.com/celineatelier_wedding/",
-      "source": "instagram"
+      "source": "instagram",
+      "status": "collected"
+    },
+    {
+      "name": "플로렌스 웨딩",
+      "handle": null,
+      "official_url": "https://florencewedding.co.kr/",
+      "instagram": null,
+      "region": "청담",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "셀레브 (Sesreves)",
+      "handle": null,
+      "official_url": "https://sesreves.net/",
+      "instagram": null,
+      "region": "청담",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "벨에포크",
+      "handle": null,
+      "official_url": "http://www.epoquewed.com/",
+      "instagram": null,
+      "region": "청담",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "플레브 아뜰리에",
+      "handle": null,
+      "official_url": "https://fleuve-atelier.com/",
+      "instagram": null,
+      "region": "서울",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "브라이드로체",
+      "handle": null,
+      "official_url": "https://rochedress.com/",
+      "instagram": null,
+      "region": "논현",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "로엘드레스",
+      "handle": null,
+      "official_url": "https://roeldress.com/",
+      "instagram": null,
+      "region": "역삼",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "루나스드레스하우스",
+      "handle": null,
+      "official_url": "https://lunasdresshouse.com/",
+      "instagram": null,
+      "region": null,
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "Arha Bridal",
+      "handle": null,
+      "official_url": "https://arhabridal.com/",
+      "instagram": null,
+      "region": null,
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "아뜰리에로리에",
+      "handle": null,
+      "official_url": null,
+      "instagram": null,
+      "region": null,
+      "source": "unverified",
+      "status": "candidate",
+      "images_dir": null
     }
   ]
 }
