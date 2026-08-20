@@ -15,3 +15,12 @@ V0는 **드레스 한 카테고리**로 가설 하나만 검증한다 — 사람
 | [docs/raw-conversation.md](docs/raw-conversation.md) | 아이디어 발단 원본 대화 (참고용) |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 브랜치·PR·에이전트 리뷰 흐름 |
 | [CLAUDE.md](CLAUDE.md) | 에이전트 세션에 매번 로드되는 규칙 |
+
+## 라이선스
+
+[AGPL-3.0](LICENSE). 코드는 열려 있고, 이 코드를 서비스로 올리는 사람은 자기 수정분도 공개해야 한다.
+지적재산은 기여자들이 보유하므로 필요하면 별도의 상업 라이선스를 병행할 수 있다.
+
+라이선스가 덮는 것은 **우리가 쓴 코드와 우리가 생성한 데이터**(속성 태깅, `data/dress-meta.json`)다.
+드레스샵 포트폴리오 이미지는 각 업체의 저작물이고 이 레포에 포함되지 않는다 —
+`data/seed-images/`는 gitignore이며 출처 기록만 남긴다. `docs/architecture.md`의 이미지 소싱 참고.
