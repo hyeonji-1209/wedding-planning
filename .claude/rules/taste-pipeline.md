@@ -1,6 +1,8 @@
 ---
 paths:
   - "web/src/lib/taste/**"
+  - "web/scripts/**"
+  - "web/evals/**"
   - "web/src/data/**"
   - "scripts/**"
   - "evals/**"
