@@ -105,3 +105,6 @@ Cut 1에서 하나라도 손대고 싶으면 그건 Cut 1을 안 끝내고 싶�
 | 2026-08-19 | Cut 1은 **취향 프로필만** 검증, 추천 순위는 Cut 2로 | 시드 4곳이면 사용자가 어차피 전부 본다. 순위가 의미를 가지려면 최소 8~10곳 |
 | 2026-08-19 | 포지셔닝: "AI 웨딩플래너" 금지 | 웨딩북이 이미 그 단어를 쓴다. 우리는 Taste Discovery |
 | 2026-08-19 | 공개 레포 + 전량 PR 운영 (main 직접 커밋 없음) | 에이전트가 만든 diff는 사람이 한 번 봐야 하고, PR이 그 유일한 관문이다 |
+| 2026-08-20 | **Postgres/pgvector는 Cut 2로 연기.** Cut 1은 태깅 결과 JSON 커밋 + Supabase Storage(비공개 버킷, 시드 이미지 서빙)만 | 앱이 이미 완전 결정적(세션=URL 토큰, 매칭=인메모리 코사인)이라 100장 규모에 DB가 하는 일이 없다. 600장·30곳 되는 Cut 2에서 도입 |
+| 2026-08-20 | Cut 1 배포는 Vercel + Basic Auth 미들웨어(`SITE_PASSWORD`) + noindex | 비공개 정책 준수. Vercel 무료 플랜엔 deployment protection이 없다 |
+| 2026-08-20 | 매칭 벡터는 **36차원** (one-hot 29 + 수치 3 + mood 4) — `architecture.md`의 `vector(24)`는 오기로 확정, 수정 | 스펙 §2 축을 전부 평탄화하면 36. 코드(`vector.ts` `VECTOR_DIM`)와 문서 일치 |

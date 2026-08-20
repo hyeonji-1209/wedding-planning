@@ -20,6 +20,10 @@
 
 ## 데이터 모델
 
+> **Cut 1에서는 이 스키마를 만들지 않는다** (Decision Log 2026-08-20). 태깅 결과는
+> `web/src/data/tagged.json`으로 커밋되고, 시드 이미지는 Supabase Storage 비공개 버킷에서
+> 서명 URL로 서빙된다. 아래 스키마는 600장·30곳이 되는 Cut 2의 목표 구조다.
+
 ```sql
 create extension if not exists vector;
 
@@ -38,7 +42,7 @@ create table dress_images (
   source_url text not null,     -- 공식 출처. 원본 재호스팅 금지 (아래 §저작권)
   thumb_path text,              -- 파생 썸네일. nullable — 정책 확정 전엔 null
   attrs jsonb not null,         -- DressAttributes
-  vec vector(24) not null,      -- attrs를 평탄화한 매칭 벡터
+  vec vector(36) not null,      -- attrs 평탄화: one-hot 29 + 수치 3 + mood 4 (lib/taste/vector.ts VECTOR_DIM)
   tagged_by text not null,      -- 'claude-opus-5' | 'human' — 회귀 추적용
   created_at timestamptz default now()
 );

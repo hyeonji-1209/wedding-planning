@@ -13,9 +13,7 @@ import {
 
 const MOOD_KEYS = ["modern", "romantic", "classic", "bold"] as const;
 
-// one-hot 축 6그룹(29) + 수치 축 3 + mood 4 = 36차원.
-// docs/architecture.md의 vector(24)와 다르다 — spec §2의 축을 전부 평탄화하면 24로 안 떨어진다.
-// DB 붙일 때 어느 쪽이 맞는지 확정 필요 (kickoff Open Question로 올림).
+// one-hot 축 6그룹(29) + 수치 축 3 + mood 4 = 36차원 (kickoff Decision Log 2026-08-20 확정).
 export const VECTOR_DIM =
   SILHOUETTES.length +
   NECKLINES.length +
