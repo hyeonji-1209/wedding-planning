@@ -7,7 +7,7 @@
 ```bash
 git switch -c feat/무엇을-되게-만드는지     # 브랜치는 짧게, 하루 안에 머지
 # ... 작업 ...
-pnpm check
+cd web && npm run check
 gh pr create                               # 템플릿이 뜬다. Outcome부터 쓴다
 ```
 

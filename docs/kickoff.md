@@ -87,6 +87,7 @@ Cut 1에서 하나라도 손대고 싶으면 그건 Cut 1을 안 끝내고 싶�
 | Q4 | 태깅에 Opus 5가 필요한가 Sonnet 5로 충분한가? 골든셋 A/B. **비용 아니라 정확도로 판단**하고 결과를 여기 기록 | Cut 2 | Intelligence |
 | Q5 | 공유 카드가 실제로 공유되나? 안 되면 획득 채널 전체를 다시 짜야 한다 | Cut 3 | Product |
 | Q6 | 웨딩북 AI가 스드메로 내려오면 우리 wedge가 남나? 남는 건 "설명 가능한 취향 매칭" 하나 | Cut 3 | Product |
+| Q9 | 패키지 매니저를 npm으로 확정할까 pnpm으로 옮길까? 현재 `package-lock.json`이 커밋돼 있어 실질 npm인데 문서엔 pnpm이라 적혀 있었다. 어느 쪽이든 하나만 남기고 락파일도 하나만 커밋한다 | Cut 1 | Platform |
 | Q8 | 커밋 트레일러를 `Assisted-by:`로 통일할까? 현재 에이전트 기본값이 `Co-Authored-By:`라 설정을 바꿔야 한다. OSS 관행은 후자를 AI에 쓰지 않는 쪽 | Cut 1 | Product |
 | Q7 | **라이선스를 뭘로 할까?** 공개 레포인데 라이선스가 없으면 제3자에게 사용 권리가 없다. 사업 제품이라 MIT는 과할 수 있고, 소스 공개만 원하면 라이선스 없이 두거나 BUSL/Elastic 같은 source-available도 선택지 | Cut 1 | Product |
 
@@ -104,3 +105,6 @@ Cut 1에서 하나라도 손대고 싶으면 그건 Cut 1을 안 끝내고 싶�
 | 2026-08-19 | Cut 1은 **취향 프로필만** 검증, 추천 순위는 Cut 2로 | 시드 4곳이면 사용자가 어차피 전부 본다. 순위가 의미를 가지려면 최소 8~10곳 |
 | 2026-08-19 | 포지셔닝: "AI 웨딩플래너" 금지 | 웨딩북이 이미 그 단어를 쓴다. 우리는 Taste Discovery |
 | 2026-08-19 | 공개 레포 + 전량 PR 운영 (main 직접 커밋 없음) | 에이전트가 만든 diff는 사람이 한 번 봐야 하고, PR이 그 유일한 관문이다 |
+| 2026-08-20 | **Postgres/pgvector는 Cut 2로 연기.** Cut 1은 태깅 결과 JSON 커밋 + Supabase Storage(비공개 버킷, 시드 이미지 서빙)만 | 앱이 이미 완전 결정적(세션=URL 토큰, 매칭=인메모리 코사인)이라 100장 규모에 DB가 하는 일이 없다. 600장·30곳 되는 Cut 2에서 도입 |
+| 2026-08-20 | Cut 1 배포는 Vercel + Basic Auth 미들웨어(`SITE_PASSWORD`) + noindex | 비공개 정책 준수. Vercel 무료 플랜엔 deployment protection이 없다 |
+| 2026-08-20 | 매칭 벡터는 **36차원** (one-hot 29 + 수치 3 + mood 4) — `architecture.md`의 `vector(24)`는 오기로 확정, 수정 | 스펙 §2 축을 전부 평탄화하면 36. 코드(`vector.ts` `VECTOR_DIM`)와 문서 일치 |
