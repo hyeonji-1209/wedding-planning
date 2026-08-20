@@ -37,6 +37,18 @@
           }
         ]
       }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/who.py\" 2>/dev/null || true",
+            "timeout": 25,
+            "statusMessage": "팀 현황 갱신 중..."
+          }
+        ]
+      }
     ]
   }
 }
