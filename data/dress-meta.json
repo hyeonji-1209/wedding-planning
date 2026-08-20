@@ -1,0 +1,81 @@
+{
+  "fleuve_atelier": {
+    "187": {
+      "file": "187.jpg",
+      "name": "루나",
+      "name_en": "Luna",
+      "price_note": "대여가 85만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=187"
+    },
+    "188": {
+      "file": "188.jpg",
+      "name": "레이",
+      "name_en": "Rai",
+      "price_note": "대여가 80만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=188"
+    },
+    "189": {
+      "file": "189.jpg",
+      "name": "델라",
+      "name_en": "Della",
+      "price_note": "대여가 90만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=189"
+    },
+    "190": {
+      "file": "190.jpg",
+      "name": "에블린",
+      "name_en": "Evelyn",
+      "price_note": "대여가 95만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=190"
+    },
+    "191": {
+      "file": "191.jpg",
+      "name": "세이지",
+      "name_en": "Sage",
+      "price_note": "대여가 95만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=191"
+    },
+    "192": {
+      "file": "192.jpg",
+      "name": "아이린",
+      "name_en": "Irene",
+      "price_note": "대여가 90만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=192"
+    },
+    "193": {
+      "file": "193.jpg",
+      "name": "필리스",
+      "name_en": "Phillies",
+      "price_note": "대여가 98만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=193"
+    },
+    "195": {
+      "file": "195.jpg",
+      "name": "엘라",
+      "name_en": "Ella",
+      "price_note": "대여가 90만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=195"
+    },
+    "197": {
+      "file": "197.jpg",
+      "name": "아인",
+      "name_en": "Ain",
+      "price_note": "대여가 85만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=197"
+    },
+    "198": {
+      "file": "198.jpg",
+      "name": "클로이",
+      "name_en": "Chloe",
+      "price_note": "대여가 85만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=198"
+    },
+    "199": {
+      "file": "199.jpg",
+      "name": "케인",
+      "name_en": "Kein",
+      "price_note": "대여가 95만원",
+      "source_url": "https://fleuve-atelier.com/98/?idx=199"
+    }
+  }
+}
