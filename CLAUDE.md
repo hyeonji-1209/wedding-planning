@@ -35,11 +35,13 @@ Anthropic SDK `claude-opus-5` (`thinking: {type:"adaptive"}`, 이미지 태깅�
 - main은 항상 동작. 작은 PR을 자주. force push 금지 (3명이 공유하는 브랜치다).
 - 막히면 물어보기 전에 만들어서 보여준다. 하루짜리 프로토타입이 일주일짜리 논의보다 싸다.
 - 모르는 제품 결정은 지어내지 말고 `docs/kickoff.md`의 Open Questions에 추가.
+- **"무슨 일이 있었나"는 `git log`가 아니라 PR 본문과 Decision Log에 있다.** 남의 결정을 다시 유도하기 전에 `TEAM-STATUS.md`와 해당 PR을 먼저 읽는다.
 
 ## 문서 — 필요할 때 읽는다 (자동 로드 아님)
 
 | 언제 | 읽을 것 |
 |---|---|
+| **세션 시작할 때 — 팀이 지금 뭘 하는 중인지** | `TEAM-STATUS.md` (자동 생성) |
 | 지금 뭘 하는 중인지 / 우선순위 | `docs/kickoff.md` |
 | 범위·스키마·성공 기준을 확인할 때 | `docs/spec-v0.md` |
 | 데이터 모델·저작권·AI 사용처 | `docs/architecture.md` |
