@@ -5,19 +5,24 @@ V0 범위는 **드레스 한 카테고리**뿐. 스튜디오/메이크업/가격
 
 ## Commands
 
+앱은 `web/`에 있다. 아래 명령은 **`cd web` 후에** 돈다.
+
 ```bash
-pnpm dev                      # localhost:3000
-pnpm check                    # typecheck + lint + test (커밋 전 이거 하나만)
-pnpm test --reporter=dot      # 조용한 테스트 출력
-pnpm ingest -- --limit 20     # 이미지 태깅 파이프라인 (Batch API)
-pnpm eval:taste               # 골든셋 대비 추천 품질 회귀
+npm run dev                   # localhost:3000
+npm run check                 # typecheck + lint + test (커밋 전 이거 하나만)
+npm test -- --reporter=dot    # 조용한 테스트 출력
 ```
+
+패키지 매니저는 **npm**이다 (`web/package-lock.json`). pnpm으로 돌리면 두 번째 락파일이 생긴다.
+
+`./scripts/normalize-seed.sh` 는 레포 루트에서 돈다 (수집 이미지 정리).
+태깅 파이프라인과 골든셋 회귀는 아직 없다 — Cut 1-3에서 만든다.
 
 출력이 긴 명령은 항상 quiet 플래그로. 로그를 대화창에 쏟지 말 것.
 
 ## Stack
 
-Next.js 15 (App Router, TS) · Supabase (Postgres + pgvector + Storage) · Vercel ·
+Next.js 15 (App Router, TS) in `web/` · Vercel · Supabase는 Cut 2에 붙인다 (지금 데이터는 `web/src/data/seed.ts`) ·
 Anthropic SDK `claude-opus-5` (`thinking: {type:"adaptive"}`, 이미지 태깅은 Batch API)
 
 ## Rules

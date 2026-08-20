@@ -87,6 +87,7 @@ Cut 1에서 하나라도 손대고 싶으면 그건 Cut 1을 안 끝내고 싶�
 | Q4 | 태깅에 Opus 5가 필요한가 Sonnet 5로 충분한가? 골든셋 A/B. **비용 아니라 정확도로 판단**하고 결과를 여기 기록 | Cut 2 | Intelligence |
 | Q5 | 공유 카드가 실제로 공유되나? 안 되면 획득 채널 전체를 다시 짜야 한다 | Cut 3 | Product |
 | Q6 | 웨딩북 AI가 스드메로 내려오면 우리 wedge가 남나? 남는 건 "설명 가능한 취향 매칭" 하나 | Cut 3 | Product |
+| Q9 | 패키지 매니저를 npm으로 확정할까 pnpm으로 옮길까? 현재 `package-lock.json`이 커밋돼 있어 실질 npm인데 문서엔 pnpm이라 적혀 있었다. 어느 쪽이든 하나만 남기고 락파일도 하나만 커밋한다 | Cut 1 | Platform |
 | Q8 | 커밋 트레일러를 `Assisted-by:`로 통일할까? 현재 에이전트 기본값이 `Co-Authored-By:`라 설정을 바꿔야 한다. OSS 관행은 후자를 AI에 쓰지 않는 쪽 | Cut 1 | Product |
 | Q7 | **라이선스를 뭘로 할까?** 공개 레포인데 라이선스가 없으면 제3자에게 사용 권리가 없다. 사업 제품이라 MIT는 과할 수 있고, 소스 공개만 원하면 라이선스 없이 두거나 BUSL/Elastic 같은 source-available도 선택지 | Cut 1 | Product |
 
