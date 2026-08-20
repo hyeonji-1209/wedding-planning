@@ -1,33 +1,199 @@
 {
-  "_comment": "Cut 1 시드. 이미지 파일은 여기 없다 — 출처만 기록한다. docs/architecture.md '이미지 소싱' 참고.",
+  "_comment": "샵 목록과 수집 규칙. adapter별로 scripts/harvest.py 가 처리한다 — 업체 추가는 여기에 harvest 블록을 넣으면 되고 스크립트는 안 고친다. 이미지 파일은 여기 없다. docs/architecture.md '이미지 소싱' 참고.",
   "shops": [
     {
       "name": "헤스티아",
       "handle": "hestia_bride",
       "official_url": "http://w-hestia.com/",
       "instagram": "https://www.instagram.com/hestia_bride/",
-      "source": "official_site"
+      "source": "official_site",
+      "status": "collected",
+      "harvest": {
+        "adapter": "manual",
+        "note": "인스타 게시물에서 사람이 수집"
+      }
     },
     {
       "name": "르네아뜰리에",
       "handle": "rene_atelier_official",
       "official_url": null,
       "instagram": "https://www.instagram.com/rene_atelier_official/",
-      "source": "instagram"
+      "source": "instagram",
+      "status": "collected",
+      "harvest": {
+        "adapter": "manual",
+        "note": "인스타 게시물에서 사람이 수집"
+      }
     },
     {
       "name": "이브스더데이",
       "handle": "eves.theday",
       "official_url": null,
       "instagram": "https://www.instagram.com/eves.theday/",
-      "source": "instagram"
+      "source": "instagram",
+      "status": "collected",
+      "harvest": {
+        "adapter": "manual",
+        "note": "인스타 게시물에서 사람이 수집"
+      }
     },
     {
       "name": "셀린아뜰리에",
       "handle": "celineatelier_wedding",
       "official_url": null,
       "instagram": "https://www.instagram.com/celineatelier_wedding/",
-      "source": "instagram"
+      "source": "instagram",
+      "status": "collected",
+      "harvest": {
+        "adapter": "manual",
+        "note": "인스타 게시물에서 사람이 수집"
+      }
+    },
+    {
+      "name": "플로렌스 웨딩",
+      "handle": "florence",
+      "official_url": "https://florencewedding.co.kr/",
+      "instagram": null,
+      "region": "청담",
+      "source": "official_site",
+      "status": "collected",
+      "images_dir": "data/seed-images/florence",
+      "harvest": {
+        "adapter": "imweb",
+        "per_page": 3,
+        "pages": [
+          "https://florencewedding.co.kr/MODERNPURITY",
+          "https://florencewedding.co.kr/SOFTARCHITECTURE",
+          "https://florencewedding.co.kr/TIMLESSSILKICON",
+          "https://florencewedding.co.kr/CLASSICTAPESTRY",
+          "https://florencewedding.co.kr/ETHEREALBLOOM",
+          "https://florencewedding.co.kr/GARDENELEGANCE",
+          "https://florencewedding.co.kr/GENTLEBLOOM",
+          "https://florencewedding.co.kr/GoldenPoise",
+          "https://florencewedding.co.kr/LAVENDERVEIL",
+          "https://florencewedding.co.kr/modernmuse",
+          "https://florencewedding.co.kr/OPULENTGARDEN",
+          "https://florencewedding.co.kr/Puregrace",
+          "https://florencewedding.co.kr/ROYALHERITAGE",
+          "https://florencewedding.co.kr/softromance",
+          "https://florencewedding.co.kr/WHITEPETAL"
+        ],
+        "skip": {
+          "colordress": "색드레스(2부) — 흰색이 아니라 tone 축이 깨진다",
+          "Celebrity": "연예인 협찬 게시물, 드레스 카탈로그 아님"
+        }
+      }
+    },
+    {
+      "name": "셀레브 (Sesreves)",
+      "handle": null,
+      "official_url": "https://sesreves.net/",
+      "instagram": null,
+      "region": "청담",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "벨에포크",
+      "handle": null,
+      "official_url": "http://www.epoquewed.com/",
+      "instagram": null,
+      "region": "청담",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "플레브 아뜰리에",
+      "handle": "fleuve_atelier",
+      "official_url": "https://fleuve-atelier.com/",
+      "instagram": null,
+      "region": "서울",
+      "source": "official_site",
+      "status": "collected",
+      "images_dir": "data/seed-images/fleuve_atelier",
+      "harvest": {
+        "adapter": "imweb",
+        "pages": [
+          {
+            "url": "https://fleuve-atelier.com/98",
+            "per_page": 1
+          },
+          {
+            "url": "https://fleuve-atelier.com/lookbook",
+            "per_page": 14
+          }
+        ],
+        "note": "?idx= 상품 카탈로그(제목에서 이름·영문명·대여가) + 룩북 갤러리. 카탈로그가 12벌뿐이라 룩북으로 채운다"
+      }
+    },
+    {
+      "name": "브라이드로체",
+      "handle": null,
+      "official_url": "https://rochedress.com/",
+      "instagram": null,
+      "region": "논현",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "로엘드레스",
+      "handle": null,
+      "official_url": "https://roeldress.com/",
+      "instagram": null,
+      "region": "역삼",
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "루나스드레스하우스",
+      "handle": null,
+      "official_url": "https://lunasdresshouse.com/",
+      "instagram": null,
+      "region": null,
+      "source": "official_site",
+      "status": "candidate",
+      "images_dir": null
+    },
+    {
+      "name": "Arha Bridal",
+      "handle": "arha_bridal",
+      "official_url": "https://arhabridal.com/",
+      "instagram": null,
+      "region": null,
+      "source": "official_site",
+      "status": "collected",
+      "images_dir": "data/seed-images/arha_bridal",
+      "harvest": {
+        "adapter": "imweb",
+        "per_page": 4,
+        "pages": [
+          "https://arhabridal.com/2023FW",
+          "https://arhabridal.com/2022FW",
+          "https://arhabridal.com/2022SS",
+          "https://arhabridal.com/2021FW",
+          "https://arhabridal.com/2021SS",
+          "https://arhabridal.com/2020SS"
+        ]
+      }
+    },
+    {
+      "name": "아뜰리에로리에",
+      "handle": null,
+      "official_url": null,
+      "instagram": null,
+      "region": null,
+      "source": "unverified",
+      "status": "candidate",
+      "images_dir": null
     }
-  ]
+  ],
+  "_defaults": {
+    "min_width": 1000,
+    "portrait_only": true,
+    "note": "세로(h>w)이고 가로 min_width 이상만 받는다. imweb의 upload/·thumbnail/ 경로는 크기를 뜻하지 않아서 경로로 걸러선 안 된다. pages 항목은 URL 문자열이거나 {url, per_page} 객체다 — 상품 카탈로그는 드레스당 1장, 갤러리는 여러 장이라 페이지마다 다르다"
+  }
 }
