@@ -17,3 +17,6 @@ web/supabase/
 
 # 파생 파일 — scripts/who.py 가 세션마다 다시 만든다 (원본은 GitHub의 PR·커밋)
 TEAM-STATUS.md
+
+# 팀에 전달용 이미지 묶음 — 레포에 올리지 않는다
+data/*.zip

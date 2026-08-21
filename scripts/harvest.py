@@ -43,24 +43,32 @@ def uniq(seq):
     return out
 
 
-def save_qualifying(urls, out_dir, prefix, want, min_width):
-    """조건에 맞는 첫 want장을 저장하고 [(파일명, 'WxH')] 반환.
+def next_free(out_dir, prefix):
+    n = 1
+    while (out_dir / f"{prefix}-{n:02d}.jpg").exists():
+        n += 1
+    return out_dir / f"{prefix}-{n:02d}.jpg"
+
+
+def save_qualifying(urls, out_dir, prefix, want, min_width, done):
+    """조건에 맞는 이미지를 want장까지 저장하고 [(파일명, 'WxH', 이미지URL)] 반환.
 
     경로(upload/ vs thumbnail/)로 걸러선 안 된다 — imweb 은 같은 경로에
     152x152 아이콘과 1920x2879 원본을 섞어 둔다. 해상도로만 판정한다.
+
+    done: 이미 받아 둔 이미지 URL 집합. 부분 재개 시 이걸로 건너뛴다.
+    파일 개수만 세서 건너뛰면, 이미 01 로 저장된 URL 을 다시 받아 03 으로
+    저장하게 된다 (같은 사진이 파일명만 다르게 두 장). URL 로 판정해야 한다.
     """
-    saved, n = [], 0
-    while n < want:
-        n += 1
-        f = out_dir / f"{prefix}-{n:02d}.jpg"
-        if f.exists():                       # 멱등: 이미 받은 건 건드리지 않는다
-            saved.append((f.name, "있음")); continue
-        break
-    if len(saved) >= want:
-        return saved
+    have = sorted(out_dir.glob(f"{prefix}-*.jpg"))
+    if len(have) >= want:
+        return []                            # 이미 채워졌다 — 네트워크도 타지 않는다
+    saved = []
     for u in urls:
-        if len(saved) >= want:
+        if len(have) + len(saved) >= want:
             break
+        if u in done:                        # 이 URL 은 이전 실행에서 이미 저장됐다
+            continue
         blob = fetch(u, binary=True)
         if not blob:
             continue
@@ -68,17 +76,25 @@ def save_qualifying(urls, out_dir, prefix, want, min_width):
             t.write(blob); tmp = Path(t.name)
         w, h = dims(tmp)
         if h > w and w >= min_width:
-            f = out_dir / f"{prefix}-{len(saved)+1:02d}.jpg"
-            tmp.replace(f); saved.append((f.name, f"{w}x{h}"))
+            f = next_free(out_dir, prefix)   # 기존 파일을 덮지 않는다 (중간이 빈 경우)
+            tmp.replace(f); saved.append((f.name, f"{w}x{h}", u))
         else:
             tmp.unlink(missing_ok=True)
     return saved
 
 
-def imweb(shop, cfg, defaults, meta):
+def save_meta(all_meta):
+    """부분 저장. done 의 원천이 이 파일이라, 페이지 하나가 끝나면 바로 쓴다.
+    런이 완주하지 못하면 이미지는 디스크에 있는데 URL 집합엔 없는 상태가 되고,
+    재개 시 같은 URL을 다시 받아 다른 번호로 저장한다."""
+    META.write_text(json.dumps(all_meta, ensure_ascii=False, indent=2) + "\n")
+
+
+def imweb(shop, cfg, defaults, meta, flush):
     """imweb 사이트. ?idx= 상품 링크가 있으면 상품 카탈로그, 없으면 갤러리 페이지."""
     out_dir = IMAGES / shop["handle"]; out_dir.mkdir(parents=True, exist_ok=True)
     min_width = cfg.get("min_width", defaults["min_width"])
+    done = {v["image_url"] for v in meta.values() if v.get("image_url")}
     for entry in cfg["pages"]:
         # 문자열이면 샵 기본값, 객체면 그 페이지 전용 장수를 쓴다
         page_url = entry if isinstance(entry, str) else entry["url"]
@@ -94,14 +110,21 @@ def imweb(shop, cfg, defaults, meta):
                 if not detail:
                     continue
                 title = re.sub(r"\s*:.*", "", (re.search(r"<title>([^<]*)", detail) or [None, ""])[1]).strip()
-                for name, dim in save_qualifying(uniq(CDN.findall(detail)), out_dir, str(idx), per_page, min_width):
+                for name, dim, img in save_qualifying(uniq(CDN.findall(detail)), out_dir,
+                                                     str(idx), per_page, min_width, done):
                     print(f"  {dim:11} {shop['handle']}/{name}  {title}")
-                    meta[name] = parse_title(title) | {"source_url": f"{page_url}/?idx={idx}"}
+                    meta[name] = parse_title(title) | {"source_url": f"{page_url}/?idx={idx}",
+                                                       "image_url": img}
+                    done.add(img)
+                flush()
         else:
-            for name, dim in save_qualifying(uniq(CDN.findall(page)), out_dir, slug, per_page, min_width):
+            for name, dim, img in save_qualifying(uniq(CDN.findall(page)), out_dir,
+                                                 slug, per_page, min_width, done):
                 print(f"  {dim:11} {shop['handle']}/{name}  ({slug})")
                 meta[name] = {"name": None, "name_en": None, "price_note": None,
-                              "collection": slug, "source_url": page_url}
+                              "collection": slug, "source_url": page_url, "image_url": img}
+                done.add(img)
+            flush()
 
 
 def parse_title(title):
@@ -111,7 +134,7 @@ def parse_title(title):
     return {"name": g(1) or title, "name_en": g(2), "price_note": g(3), "collection": None}
 
 
-def manual(shop, cfg, defaults, meta):
+def manual(shop, cfg, defaults, meta, flush):
     n = len(list((IMAGES / shop["handle"]).glob("*.jpg"))) if (IMAGES / shop["handle"]).exists() else 0
     print(f"  수동 수집 — {n}장. {cfg.get('note','')}")
 
@@ -132,6 +155,6 @@ if __name__ == "__main__":
             print(f"{shop['name']}: adapter '{cfg['adapter']}' 없음 — ADAPTERS 에 추가할 것", file=sys.stderr); continue
         print(f"\n{shop['name']} ({shop['handle']}) [{cfg['adapter']}]")
         meta = all_meta.setdefault(shop["handle"], {})
-        fn(shop, cfg, defaults, meta)
-    META.write_text(json.dumps(all_meta, ensure_ascii=False, indent=2) + "\n")
+        fn(shop, cfg, defaults, meta, lambda: save_meta(all_meta))
+    save_meta(all_meta)
     print(f"\n{sum(len(v) for v in all_meta.values())}장 메타데이터 기록")
