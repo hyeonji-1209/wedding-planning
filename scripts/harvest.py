@@ -83,7 +83,14 @@ def save_qualifying(urls, out_dir, prefix, want, min_width, done):
     return saved
 
 
-def imweb(shop, cfg, defaults, meta):
+def save_meta(all_meta):
+    """부분 저장. done 의 원천이 이 파일이라, 페이지 하나가 끝나면 바로 쓴다.
+    런이 완주하지 못하면 이미지는 디스크에 있는데 URL 집합엔 없는 상태가 되고,
+    재개 시 같은 URL을 다시 받아 다른 번호로 저장한다."""
+    META.write_text(json.dumps(all_meta, ensure_ascii=False, indent=2) + "\n")
+
+
+def imweb(shop, cfg, defaults, meta, flush):
     """imweb 사이트. ?idx= 상품 링크가 있으면 상품 카탈로그, 없으면 갤러리 페이지."""
     out_dir = IMAGES / shop["handle"]; out_dir.mkdir(parents=True, exist_ok=True)
     min_width = cfg.get("min_width", defaults["min_width"])
@@ -109,6 +116,7 @@ def imweb(shop, cfg, defaults, meta):
                     meta[name] = parse_title(title) | {"source_url": f"{page_url}/?idx={idx}",
                                                        "image_url": img}
                     done.add(img)
+                flush()
         else:
             for name, dim, img in save_qualifying(uniq(CDN.findall(page)), out_dir,
                                                  slug, per_page, min_width, done):
@@ -116,6 +124,7 @@ def imweb(shop, cfg, defaults, meta):
                 meta[name] = {"name": None, "name_en": None, "price_note": None,
                               "collection": slug, "source_url": page_url, "image_url": img}
                 done.add(img)
+            flush()
 
 
 def parse_title(title):
@@ -125,7 +134,7 @@ def parse_title(title):
     return {"name": g(1) or title, "name_en": g(2), "price_note": g(3), "collection": None}
 
 
-def manual(shop, cfg, defaults, meta):
+def manual(shop, cfg, defaults, meta, flush):
     n = len(list((IMAGES / shop["handle"]).glob("*.jpg"))) if (IMAGES / shop["handle"]).exists() else 0
     print(f"  수동 수집 — {n}장. {cfg.get('note','')}")
 
@@ -146,6 +155,6 @@ if __name__ == "__main__":
             print(f"{shop['name']}: adapter '{cfg['adapter']}' 없음 — ADAPTERS 에 추가할 것", file=sys.stderr); continue
         print(f"\n{shop['name']} ({shop['handle']}) [{cfg['adapter']}]")
         meta = all_meta.setdefault(shop["handle"], {})
-        fn(shop, cfg, defaults, meta)
-    META.write_text(json.dumps(all_meta, ensure_ascii=False, indent=2) + "\n")
+        fn(shop, cfg, defaults, meta, lambda: save_meta(all_meta))
+    save_meta(all_meta)
     print(f"\n{sum(len(v) for v in all_meta.values())}장 메타데이터 기록")
