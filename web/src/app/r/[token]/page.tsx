@@ -8,7 +8,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EditorialHeader, Eyebrow } from "@/components/editorial/header";
 import { ShareLink } from "@/components/share-link";
-import { DRESS_IMAGES, SHOPS, getImage } from "@/data/seed";
+import { getCatalog } from "@/data/catalog";
 import { MOOD_KO } from "@/lib/taste/labels";
 import { matchShops } from "@/lib/taste/match";
 import { buildProfile } from "@/lib/taste/profile";
@@ -21,7 +21,8 @@ type Props = { params: Promise<{ token: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { token } = await params;
   const reactions = decodeReactions(token);
-  const profile = reactions && buildProfile(reactions, DRESS_IMAGES);
+  const { images } = await getCatalog();
+  const profile = reactions && buildProfile(reactions, images);
   if (!profile) return { title: "취향 결과" };
   const summary = deterministicSummary(profile);
   return {
@@ -35,7 +36,9 @@ export default async function ResultPage({ params }: Props) {
   const reactions = decodeReactions(token);
   if (!reactions || reactions.length === 0) notFound();
 
-  const profile = buildProfile(reactions, DRESS_IMAGES);
+  const { images, shops } = await getCatalog();
+  const byId = new Map(images.map((img) => [img.id, img]));
+  const profile = buildProfile(reactions, images);
 
   if (!profile) {
     // 전부 ✕ — 프로필을 지어내지 않고 다시 청한다
@@ -61,7 +64,7 @@ export default async function ResultPage({ params }: Props) {
   }
 
   const summary = await generateSummary(profile);
-  const matches = matchShops(profile, DRESS_IMAGES, SHOPS);
+  const matches = matchShops(profile, images, shops);
   const moods = (Object.keys(profile.moodPct) as (keyof typeof profile.moodPct)[]).sort(
     (a, b) => profile.moodPct[b] - profile.moodPct[a],
   );
@@ -117,7 +120,7 @@ export default async function ResultPage({ params }: Props) {
               <span className="text-xs font-bold">{facet.label}</span>
               <span className="flex gap-1">
                 {facet.evidenceIds.slice(0, 2).map((id) => {
-                  const img = getImage(id);
+                  const img = byId.get(id);
                   if (!img) return null;
                   return (
                     <span key={id} className="relative block h-9 w-7 overflow-hidden bg-muted">

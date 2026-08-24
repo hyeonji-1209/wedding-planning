@@ -2,7 +2,7 @@
 // 결과가 토큰에서 결정적으로 나오므로 저장소 없이 요청 시 생성한다 (LLM 미사용 — 빠르고 무료).
 
 import { ImageResponse } from "next/og";
-import { DRESS_IMAGES } from "@/data/seed";
+import { getCatalog } from "@/data/catalog";
 import { MOOD_KO } from "@/lib/taste/labels";
 import { buildProfile } from "@/lib/taste/profile";
 import { deterministicSummary } from "@/lib/taste/summary";
@@ -22,7 +22,8 @@ const PAPER = "#fffdfb";
 export default async function OgImage({ params }: { params: Promise<{ token: string }> }) {
   const { token } = await params;
   const reactions = decodeReactions(token);
-  const profile = reactions && buildProfile(reactions, DRESS_IMAGES);
+  const { images } = await getCatalog();
+  const profile = reactions && buildProfile(reactions, images);
 
   const summary = profile ? deterministicSummary(profile) : null;
   const moods = profile
