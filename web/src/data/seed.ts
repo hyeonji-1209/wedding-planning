@@ -1,4 +1,4 @@
-// ⚠️ 시드 데이터 — Cut 1-2/1-3(실제 샵 4곳 × 25장 수동 수집 + Batch 태깅)이 끝나면 대체된다.
+// ⚠️ 시드 데이터 — tagged.json이 비어 있거나 Storage env가 없을 때만 쓰는 폴백 (src/data/catalog.ts).
 // 이미지는 Unsplash 무료 라이선스 8장, 원격 URL만 참조 (바이너리는 레포에 없다 — data.md 규칙).
 // 이미지마다 출처 URL·계정을 기록한다. 출처 없는 행은 불량 데이터다.
 // 샵은 가상이다 — data/seed-shops.json의 실제 샵에 무관한 Unsplash 사진을 붙이면
@@ -198,10 +198,3 @@ export const DRESS_IMAGES: DressImage[] = [
     },
   },
 ];
-
-export function getImage(id: string): DressImage | undefined {
-  return DRESS_IMAGES.find((img) => img.id === id);
-}
-
-/** 스와이프 덱. spec은 25장 — 시드가 8장뿐이라 전부 보여준다. 실데이터가 오면 25장 샘플링. */
-export const DECK: DressImage[] = DRESS_IMAGES;

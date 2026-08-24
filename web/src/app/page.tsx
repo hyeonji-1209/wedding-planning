@@ -4,10 +4,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { EditorialHeader, Eyebrow } from "@/components/editorial/header";
-import { DECK } from "@/data/seed";
+import { getCatalog, sampleDeck } from "@/data/catalog";
 
-export default function Home() {
-  const preview = DECK.slice(0, 3);
+export const dynamic = "force-dynamic"; // 서명 URL은 만료된다
+
+export default async function Home() {
+  const { images } = await getCatalog();
+  const preview = sampleDeck(images, 3);
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-6xl flex-1 flex-col px-7 pb-12 pt-10 lg:px-12">
